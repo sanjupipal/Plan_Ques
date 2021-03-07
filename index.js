@@ -47,41 +47,11 @@ const actions = [
   },
   {
     date: moment("2020-03-11").endOf("day").toDate(),
-    plan: "silver",
-    action: "start",
-  },
-  {
-    date: moment("2020-03-20").endOf("day").toDate(),
-    plan: "silver",
-    action: "stop",
-  },
-  {
-    date: moment("2020-03-20").endOf("day").toDate(),
     plan: "gold",
     action: "start",
   },
   {
     date: moment("2020-03-20").endOf("day").toDate(),
-    plan: "gold",
-    action: "stop",
-  },
-  {
-    date: moment("2020-03-20").endOf("day").toDate(),
-    plan: "bronze",
-    action: "start",
-  },
-  {
-    date: moment("2020-03-20").endOf("day").toDate(),
-    plan: "bronze",
-    action: "stop",
-  },
-  {
-    date: moment("2020-03-21").endOf("day").toDate(),
-    plan: "gold",
-    action: "start",
-  },
-  {
-    date: moment("2020-03-21").endOf("day").toDate(),
     plan: "gold",
     action: "stop",
   },
@@ -173,7 +143,8 @@ function generateBill() {
       " - ",
       moment(bill.to).format("ll"),
       bill.plan,
-      cost
+      cost,
+      "Rs"
     );
   });
 }
